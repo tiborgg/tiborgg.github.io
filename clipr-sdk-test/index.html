@@ -1,0 +1,22 @@
+<head>
+    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+  </head>
+  
+  <body>
+    <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+    <script src="clipr-sdk.mjs"></script>
+  
+    <clipr-theater>
+      <video slot="player" class="video-js" id="clipr-test-video" controls preload="auto">
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+  
+      <clipr-topics slot="right"></clipr-topics>
+      <clipr-transcripts slot="bottom"></clipr-transcripts>
+    </clipr-theater>
+  
+    <script>
+      const player = videojs('clipr-test-video');
+      player.addChild('CLIPrCaptions');
+    </script>
+  </body>
